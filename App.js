@@ -25,6 +25,7 @@ export default function App() {
     <View style={styles.screen}>
       <GoalInput onAddGoal={addGoalHandler} />
       <FlatList
+        style={styles.listContainer}
         data={courseGoals}
         renderItem={itemData => (
           <GoalItem title={itemData.item.value} />
@@ -37,5 +38,9 @@ export default function App() {
 const styles = StyleSheet.create({
   screen: {
     padding: 50
+  },
+
+  listContainer: {
+    height: '90%'
   }
 });

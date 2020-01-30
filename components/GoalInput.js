@@ -28,7 +28,11 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    borderBottomColor: 'grey',
+    borderBottomWidth: 1,
+    paddingBottom: 20,
+    marginBottom: 10
   },
 
   input: {
