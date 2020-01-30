@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Button,
-  FlatList
-} from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 
 import GoalInput from './components/GoalInput.js';
 import GoalItem from './components/GoalItem.js';
@@ -28,8 +21,13 @@ export default function App() {
         style={styles.listContainer}
         data={courseGoals}
         renderItem={itemData => (
-          <GoalItem title={itemData.item.value} />
-        )} 
+          <GoalItem
+            title={itemData.item.value}
+            onDelete={() =>
+              console.log('touched')
+            }
+          />
+        )}
       />
     </View>
   );
